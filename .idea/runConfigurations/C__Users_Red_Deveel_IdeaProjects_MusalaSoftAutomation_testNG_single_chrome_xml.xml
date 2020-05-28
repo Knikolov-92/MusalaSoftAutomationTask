@@ -1,0 +1,28 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="C:/Users/Red_Deveel/IdeaProjects/MusalaSoftAutomation/testNG-single-chrome.xml" type="TestNG" nameIsGenerated="true">
+    <module name="MusalaSoftAutomation" />
+    <useClassPathOnly />
+    <option name="SUITE_NAME" value="$PROJECT_DIR$/testNG-single-chrome.xml" />
+    <option name="PACKAGE_NAME" value="" />
+    <option name="MAIN_CLASS_NAME" value="" />
+    <option name="METHOD_NAME" value="" />
+    <option name="GROUP_NAME" value="" />
+    <option name="TEST_OBJECT" value="SUITE" />
+    <option name="PARAMETERS" value="" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Red_Deveel\IdeaProjects\MusalaSoftAutomation\TestReports" />
+    <option name="PROPERTIES_FILE" value="" />
+    <properties />
+    <listeners>
+      <listener class="org.testng.internal.annotations.DefaultAnnotationTransformer" />
+      <listener class="org.testng.reporters.FailedReporter" />
+      <listener class="com.musala.selenium.utils.MyEmailableReporter" />
+      <listener class="org.testng.TestListenerAdapter" />
+      <listener class="org.testng.reporters.DotTestListener" />
+      <listener class="org.testng.reporters.ExitCodeListener" />
+      <listener class="com.musala.selenium.utils.MyMainReporter" />
+    </listeners>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

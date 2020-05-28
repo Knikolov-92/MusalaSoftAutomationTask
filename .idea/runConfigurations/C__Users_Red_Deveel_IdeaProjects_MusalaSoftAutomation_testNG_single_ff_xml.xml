@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="C:/Users/Red_Deveel/IdeaProjects/MusalaSoftAutomation/testNG-single-ff.xml" type="TestNG" nameIsGenerated="true">
+    <useClassPathOnly />
+    <option name="SUITE_NAME" value="$PROJECT_DIR$/testNG-single-ff.xml" />
+    <option name="PACKAGE_NAME" value="" />
+    <option name="MAIN_CLASS_NAME" value="" />
+    <option name="METHOD_NAME" value="" />
+    <option name="GROUP_NAME" value="" />
+    <option name="TEST_OBJECT" value="SUITE" />
+    <option name="PARAMETERS" value="" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Red_Deveel\IdeaProjects\MusalaSoftAutomation\TestReports" />
+    <option name="PROPERTIES_FILE" value="" />
+    <properties />
+    <listeners>
+      <listener class="com.musala.selenium.utils.MySuiteHTMLReporter" />
+    </listeners>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
