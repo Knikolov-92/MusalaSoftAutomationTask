@@ -12,7 +12,11 @@
     <option name="OUTPUT_DIRECTORY" value="C:\Users\Red_Deveel\IdeaProjects\MusalaSoftAutomation\TestReports" />
     <option name="PROPERTIES_FILE" value="" />
     <properties />
-    <listeners />
+    <listeners>
+      <listener class="com.musala.selenium.utils.MyEmailableReporter" />
+      <listener class="com.musala.selenium.utils.MyMainReporter" />
+      <listener class="org.testng.internal.annotations.DefaultAnnotationTransformer" />
+    </listeners>
     <method v="2">
       <option name="Make" enabled="true" />
     </method>

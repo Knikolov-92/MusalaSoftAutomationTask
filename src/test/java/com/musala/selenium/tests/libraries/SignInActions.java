@@ -8,7 +8,6 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -43,9 +42,9 @@ public class SignInActions {
         
         Sheet sheet = excelFile.getSheet(sheetName);
         Row row = sheet.getRow(rowNumber);
-        
+
+        //get username cell value
         Cell cellUserName = row.getCell(1);
-        Cell cellPassword = row.getCell(2);
 
             if (cellUserName.getCellType().equals(NUMERIC)) {
                 userName = Integer.toString((int)cellUserName.getNumericCellValue());
@@ -54,13 +53,17 @@ public class SignInActions {
                 userName = cellUserName.getStringCellValue();
             }
 
+        //get password cell value
+        Cell cellPassword = row.getCell(2);
+
             if (cellPassword.getCellType().equals(NUMERIC)) {
                 password = Integer.toString((int)cellPassword.getNumericCellValue());
     
             } else if (cellPassword.getCellType().equals(STRING)) {
                 password = cellPassword.getStringCellValue();
             }
-            
+
+        //add username, password to list
         signInCredentials.add(userName);
         signInCredentials.add(password);
         

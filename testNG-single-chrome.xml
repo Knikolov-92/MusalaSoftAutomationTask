@@ -2,16 +2,15 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TestSuite" thread-count="2">
+<suite name="TestSuite">
 
-    <test name="ChromeTest">
+    <test name="MusalaSignIn">
 
         <parameter name="browser" value="Chrome" />
         <parameter name="baseURL" value="https://masters.musala.com/" />
 
         <classes>
-            <class name="com.musala.selenium.tests.ui_tests.sign_in.InvalidSignIn">
-            </class>
+             <class name="com.musala.selenium.tests.ui_tests.events.MasterClassEventSchedule"/>
         </classes>
     </test>
 </suite>

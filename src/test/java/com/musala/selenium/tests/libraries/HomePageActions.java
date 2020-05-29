@@ -1,7 +1,6 @@
 package com.musala.selenium.tests.libraries;
 
-import com.musala.selenium.page_objects.HomePage;
-import com.musala.selenium.page_objects.SignInPage;
+import com.musala.selenium.page_objects.*;
 import org.openqa.selenium.WebDriver;
 
 public class HomePageActions {
@@ -17,9 +16,29 @@ public class HomePageActions {
 
     public void navigatesToSignInPage()
     {
-        bobi.waitsForElementToBeClickable(HomePage.SIGNIN_BUTTON_LINK);
         bobi.clicksOn(HomePage.SIGNIN_BUTTON_LINK);
         bobi.waitsForElementToBeVisible(SignInPage.SUBMIT_SIGNIN_BUTTON);
     }
 
+    public void navigatesToMusalaSoftPageThroughFooterLink()
+    {
+        bobi.clicksOn(HomePage.MUSALASOFT_FOOTER_LINK);
+        bobi.switchesToNextTab();
+        bobi.waitsForPageTitleToContainText(MusalaSoftPage.TITLE);
+    }
+
+    public void navigatesToFacebookPage()
+    {
+        bobi.clicksOn(HomePage.FACEBOOK_FOOTER_LINK);
+        bobi.switchesToNextTab();
+        bobi.waitsForPageTitleToContainText(FacebookPage.TITLE);
+        bobi.waitsForPageURLToBe(FacebookPage.URL);
+    }
+
+    public void navigatesToArchivePage()
+    {
+        bobi.clicksOn(HomePage.ARCHIVE_BUTTON_LINK);
+        bobi.waitsForPageURLToContain(ArchivePage.URL);
+        bobi.waitsForElementToBeVisible(ArchivePage.SCHEDULE_IMAGE);
+    }
 }

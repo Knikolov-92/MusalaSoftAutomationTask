@@ -19,7 +19,6 @@ public class MyMainReporter extends Main {
         DateFormat dateFormat = new SimpleDateFormat("HH-mm-ss-dd-MM-yyyy");
         String formattedDate = dateFormat.format(date);
         String timestamp = formattedDate;
-        //outputDirectory = System.getProperty("user.dir") + "\\TestReports\\";
 
         super.generateReport(xmlSuites, suites, outputDirectory + "/" + timestamp);
     }

@@ -3,14 +3,10 @@ package com.musala.selenium.tests.ui_tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.ISuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-import org.testng.reporters.SuiteHTMLReporter;
-import org.testng.xml.XmlSuite;
 
-import java.util.Date;
 
 public class BaseTest {
 
@@ -19,10 +15,11 @@ public class BaseTest {
 
 
     @Parameters({ "browser", "baseURL" })
-    @BeforeTest
+    @BeforeTest(alwaysRun = true)
     public void initializeDriver(String browser, String baseURL)
     {
-        try{
+        try
+        {
             setDriverAndNavigateToBaseURL(browser, baseURL);
 
         } catch(Exception e)
@@ -46,7 +43,7 @@ public class BaseTest {
             {
                 System.out.println("Default option selected: initializing Chrome driver..");
                 this.driver = initChrome();
-        }
+            }
         this.driver.manage().window().maximize();
         this.driver.navigate().to(baseURL);
     }
@@ -80,7 +77,5 @@ public class BaseTest {
     {
         this.driver.quit();
     }
-
-
 
 }

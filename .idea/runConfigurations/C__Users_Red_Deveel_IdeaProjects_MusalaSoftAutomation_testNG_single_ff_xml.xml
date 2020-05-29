@@ -12,7 +12,9 @@
     <option name="PROPERTIES_FILE" value="" />
     <properties />
     <listeners>
-      <listener class="com.musala.selenium.utils.MySuiteHTMLReporter" />
+      <listener class="com.musala.selenium.utils.MyMainReporter" />
+      <listener class="com.musala.selenium.utils.MyEmailableReporter" />
+      <listener class="org.testng.internal.annotations.DefaultAnnotationTransformer" />
     </listeners>
     <method v="2">
       <option name="Make" enabled="true" />

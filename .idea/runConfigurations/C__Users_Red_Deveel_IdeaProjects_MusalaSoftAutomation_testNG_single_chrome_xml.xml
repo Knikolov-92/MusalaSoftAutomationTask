@@ -14,11 +14,7 @@
     <properties />
     <listeners>
       <listener class="org.testng.internal.annotations.DefaultAnnotationTransformer" />
-      <listener class="org.testng.reporters.FailedReporter" />
       <listener class="com.musala.selenium.utils.MyEmailableReporter" />
-      <listener class="org.testng.TestListenerAdapter" />
-      <listener class="org.testng.reporters.DotTestListener" />
-      <listener class="org.testng.reporters.ExitCodeListener" />
       <listener class="com.musala.selenium.utils.MyMainReporter" />
     </listeners>
     <method v="2">
