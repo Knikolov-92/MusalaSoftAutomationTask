@@ -2,9 +2,9 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TestSuite" thread-count="2">
+<suite name="SingleRun" thread-count="2">
 
-        <test name="FirefoxTest">
+        <test name="Test_Debug">
 
         <parameter name="browser" value="Firefox" />
         <parameter name="baseURL" value="https://masters.musala.com/" />

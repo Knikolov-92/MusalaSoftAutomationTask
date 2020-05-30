@@ -16,10 +16,11 @@ public class MyMainReporter extends Main {
                                java.lang.String outputDirectory) {
 
         Date date = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("HH-mm-ss-dd-MM-yyyy");
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss");
         String formattedDate = dateFormat.format(date);
         String timestamp = formattedDate;
+        String suite = xmlSuites.get(0).getName();
 
-        super.generateReport(xmlSuites, suites, outputDirectory + "/" + timestamp);
+        super.generateReport(xmlSuites, suites, outputDirectory + "/" + suite + "_" + timestamp);
     }
 }

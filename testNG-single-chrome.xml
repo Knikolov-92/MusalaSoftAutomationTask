@@ -2,15 +2,15 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TestSuite">
+<suite name="SingleRun">
 
-    <test name="MusalaSignIn">
+    <test name="Test_Debug">
 
         <parameter name="browser" value="Chrome" />
         <parameter name="baseURL" value="https://masters.musala.com/" />
 
         <classes>
-             <class name="com.musala.selenium.tests.ui_tests.events.MasterClassEventSchedule"/>
+             <class name="com.musala.selenium.tests.ui_tests.sign_in.InvalidSignIn"/>
         </classes>
     </test>
 </suite>

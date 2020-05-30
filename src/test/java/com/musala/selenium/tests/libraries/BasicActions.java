@@ -4,18 +4,15 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-
-import java.lang.reflect.Type;
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.NoSuchElementException;
 
 public class BasicActions {
 
     private WebDriver driver;
-    private static final int MAX_WAIT_TIME = 10000;
-    private static final int POLL_INTERVAL = 500;
+    public static final int MAX_WAIT_TIME = 10000;
+    public static final int POLL_INTERVAL = 500;
 
     public BasicActions(WebDriver driver)
     {
@@ -154,7 +151,7 @@ public class BasicActions {
     {
         waitsForWindowTabsToBeMoreThan(1);
         ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-        System.out.println("tabs size = " + tabs.size() );
+        //System.out.println("tabs size = " + tabs.size() );
 
         driver.switchTo().window(tabs.get(1));
     }
@@ -170,37 +167,5 @@ public class BasicActions {
     public void closesCurrentTab()
     {
         driver.close();
-    }
-
-    public void waitsUntilNumberOfElementsInListIsEqualOrGreaterThan(Collection collection, int numberOfElements)
-    {
-        Wait<WebDriver> wait = new FluentWait<>(driver)
-                .withTimeout(Duration.ofMillis(MAX_WAIT_TIME))
-                .pollingEvery(Duration.ofMillis(POLL_INTERVAL))
-                .ignoring(NoSuchElementException.class)
-                .ignoring(org.openqa.selenium.NoSuchElementException.class)
-                .ignoring(StaleElementReferenceException.class);
-
-        wait.until((condition) ->
-        {
-            try
-            {
-                if (collection.size() >= numberOfElements) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } catch (Exception e)
-            {
-                Type exType = e.getClass();
-                if (exType == StaleElementReferenceException.class ||
-                        exType == NoSuchElementException.class)
-                {
-                    return false;
-                } else {
-                    throw e;
-                }
-            }
-        });
     }
 }

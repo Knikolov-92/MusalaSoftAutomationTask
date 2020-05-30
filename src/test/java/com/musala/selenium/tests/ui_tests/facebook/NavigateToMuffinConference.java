@@ -29,7 +29,8 @@ public class NavigateToMuffinConference extends BaseTest {
     }
 
     @Test
-    public void CorrectPageIsLoaded_When_NavigatingThroughFacebook() throws InterruptedException {
+    public void CorrectPageIsLoaded_When_NavigatingThroughFacebook()
+    {
         dobri.navigatesToMusalaSoftPageThroughFooterLink();
         joro.verifiesMusalaSoftURLisLoaded();
         joro.verifiesMusalaSoftLogoIsDisplayed();

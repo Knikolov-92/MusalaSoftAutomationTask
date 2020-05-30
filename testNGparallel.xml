@@ -2,9 +2,9 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TestSuite" parallel="tests" thread-count="8">
+<suite name="MusalaSoftAutomation" parallel="tests" thread-count="6">
 
-    <test name="MusalaSignIn-chrome">
+    <test name="SignInMusalaMasters-chrome">
 
         <parameter name="browser" value="Chrome" />
         <parameter name="baseURL" value="https://masters.musala.com/" />
@@ -15,7 +15,7 @@
         </classes>
     </test>
 
-    <test name="MusalaSignIn-firefox">
+    <test name="SignInMusalaMasters-firefox">
 
         <parameter name="browser" value="Firefox" />
         <parameter name="baseURL" value="https://masters.musala.com/" />
@@ -26,7 +26,7 @@
         </classes>
     </test>
 
-    <test name="MusalaFacebook-chrome">
+    <test name="FacebookConference-chrome">
 
         <parameter name="browser" value="Chrome" />
         <parameter name="baseURL" value="https://masters.musala.com/" />
@@ -37,7 +37,7 @@
         </classes>
     </test>
 
-    <test name="MusalaFacebook-firefox">
+    <test name="FacebookConference-firefox">
 
         <parameter name="browser" value="Firefox" />
         <parameter name="baseURL" value="https://masters.musala.com/" />
@@ -48,7 +48,7 @@
         </classes>
     </test>
 
-    <test name="MusalaEvent-chrome">
+    <test name="EventSchedule-chrome">
 
         <parameter name="browser" value="Chrome" />
         <parameter name="baseURL" value="https://masters.musala.com/" />
@@ -59,7 +59,7 @@
         </classes>
     </test>
 
-    <test name="MusalaEvent-firefox">
+    <test name="EventSchedule-firefox">
 
         <parameter name="browser" value="Firefox" />
         <parameter name="baseURL" value="https://masters.musala.com/" />

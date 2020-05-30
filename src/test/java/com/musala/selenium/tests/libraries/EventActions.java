@@ -78,7 +78,6 @@ public class EventActions {
                     break;
             }
         }
-
     }
 
     public String getsEventNameFromSpeakerInfo(String rawText)
